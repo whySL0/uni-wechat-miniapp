@@ -1,0 +1,280 @@
+@import '@/uni_modules/uni-scss/variables.scss';
+
+
+/* ==================
+          布局
+ ==================== */
+
+ /*  -- 背景色 -- */
+.bg-gray {
+	background: #F8F8F8;
+}
+.bg-white {
+	background: #fff;
+}
+
+
+/* 字体颜色 */
+/* 一级文字颜色 */
+.text-1 {
+	color: #333;
+}
+/* 二级文字颜色 */
+.text-2 {
+	color: #666;
+}
+/* 三级文字颜色 */
+.text-3 {
+	color: #999;
+}
+/* 白色字体 */
+.text-white {
+	color: #fff; 
+}
+/* 主色 */
+.text-primary {
+	color: #19B0B0;
+}
+.text-disabled {
+	color: #C7C7C7;
+}
+.text-red {
+	color: #E94637;
+}
+.text-orange {
+	color: #FF8A00;
+}
+
+/*  -- 字体 -- */
+/* 10px */
+.text-xs {
+	font-size: 20rpx
+}
+/* 12px */
+.text-sm {
+	font-size: 24rpx
+}
+/* 14px */
+.text-df {
+	font-size: 28rpx
+}
+/* 16px */
+.text-md {
+	font-size: 32rpx
+}
+/* 18px */
+.text-lg {
+	font-size: 36rpx
+}
+/* 20px  */
+.text-xxl {
+	font-size: 40rpx;
+}
+/* 24px  */
+.text-xxxl {
+	font-size: 48rpx;
+}
+/* 40px */
+.text-superl {
+	font-size: 80rpx;
+}
+
+/*  -- flex弹性布局 -- */
+.flex {
+	display: flex;
+}
+
+.basis-xs {
+	flex-basis: 20%;
+}
+
+.basis-sm {
+	flex-basis: 40%;
+}
+
+.basis-df {
+	flex-basis: 50%;
+}
+
+.basis-lg {
+	flex-basis: 60%;
+}
+
+.basis-xl {
+	flex-basis: 80%;
+}
+
+.flex-sub {
+	flex: 1;
+}
+
+.flex-twice {
+	flex: 2;
+}
+
+.flex-treble {
+	flex: 3;
+}
+
+.flex-direction {
+	flex-direction: column;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.align-start {
+	align-items: flex-start;
+}
+
+.align-end {
+	align-items: flex-end;
+}
+
+.align-center {
+	align-items: center;
+}
+
+.align-stretch {
+	align-items: stretch;
+}
+.align-baseline {
+	align-items: baseline;
+}
+
+.self-start {
+	align-self: flex-start;
+}
+
+.self-center {
+	align-self: flex-center;
+}
+
+.self-end {
+	align-self: flex-end;
+}
+
+.self-stretch {
+	align-self: stretch;
+}
+
+.align-stretch {
+	align-items: stretch;
+}
+
+.justify-start {
+	justify-content: flex-start;
+}
+
+.justify-end {
+	justify-content: flex-end;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.justify-between {
+	justify-content: space-between;
+}
+
+.justify-around {
+	justify-content: space-around;
+}
+
+/* -- 浮动 --  */
+
+.cf::after,
+.cf::before {
+	content: " ";
+	display: table;
+}
+
+.cf::after {
+	clear: both;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+/* 一行超出省略号 */
+.text-cut {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;                     
+}
+/* 一行超出省略号 */
+.text-cut2 {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2
+}
+/* 三行 超出省略号 */
+.text-cut3 {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3
+}
+/* 字体居中对齐 */
+.text-center {
+	text-align: center;
+}
+.text-left {
+	text-align: left;
+}
+.text-right {
+	text-align: right;
+}
+
+
+
+/* 常见行高 */
+.lh-26 {
+  line-height: 52rpx;
+}
+.lh-24 {
+  line-height: 48rpx;
+}
+.lh-22 {
+  line-height: 44rpx;
+}
+.lh-20 {
+	line-height: 40rpx;
+}
+.lh-18 {
+	line-height: 36rpx;
+}
+.lh-10 {
+	line-height: 20rpx;
+}
+
+
+.opacity-8 {
+	opacity: 0.8;
+} 
+.opacity-4 {
+	opacity: 0.4;
+} 
+
+.font-bold {
+	font-weight: bold;
+}
+.font-500 {
+	font-weight: 500;
+}
+.font-normal {
+	font-weight: normal;
+}
+.font-600 {
+	font-weight: 600;
+}
