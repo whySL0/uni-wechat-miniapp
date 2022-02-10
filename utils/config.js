@@ -5,8 +5,7 @@ export default {
 
   hostMap: {
     dev: "http://10.10.31.60:8088",
-    // test: "http://10.10.31.75:8088",
-    test: "https://v6test-authc.zydmall.com",
-    prod: "https://www.zydmall.com"
+    test: "http://10.10.31.60:8088",
+    prod: "http://10.10.31.60:8088"
   }
 }
