@@ -2,7 +2,7 @@
 	<view class="container">
 		<view class="intro">测试用</view>
 		<button type="primary" @click="getList()">测试按钮</button>
-		
+		<button type="success" @click="navTo()">跳转</button>
 		<view class="flex flex-wrap align-center">
 			<view class="item lh-20 text-2" v-for="(item, index) in companyList">{{item.sshortName}}</view>
 		</view>
@@ -26,6 +26,11 @@
 		onLoad() {},
 
 		methods: {
+			navTo() {
+				uni.navigateTo({
+					url: '/pages/mine/index'
+				});
+			},
 			getList() {
 				getCompanyList().then(res => {
 					this.companyList = res;

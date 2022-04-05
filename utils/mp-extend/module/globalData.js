@@ -44,29 +44,29 @@ export default {
 
     [$globalSetDataArray]: [],
 
-    $globalSetData(o) {
-      // 所有页面setData所用的object
-      let obj = {};
-      for (let key in o) {
-        obj["$globalData." + key] = o[key];
-      }
+    // $globalSetData(o) {
+    //   // 所有页面setData所用的object
+    //   let obj = {};
+    //   for (let key in o) {
+    //     obj["$globalData." + key] = o[key];
+    //   }
 
-      // 对当前页面堆中的所有页面进行操作
-      const currentPages = this.$getCurrentPages();
-      for (const pagePath in currentPages) {
-        const pageItem = currentPages[pagePath];
-        // 直接调用前台页面的setData
-        if (pageItem.__route__ === this.__route__) {
-          pageItem.setData(obj);
-          // 更新 app.globalData 的值
-          appInstance.globalData = deepCopyData(pageItem.data.$globalData);
-        }
-        // 后台页面暂存到数组中
-        else {
-          pageItem[$globalSetDataArray].push(obj);
-        }
-      }
-    }
+    //   // 对当前页面堆中的所有页面进行操作
+    //   const currentPages = this.$getCurrentPages();
+    //   for (const pagePath in currentPages) {
+    //     const pageItem = currentPages[pagePath];
+    //     // 直接调用前台页面的setData
+    //     if (pageItem.__route__ === this.__route__) {
+    //       pageItem.setData(obj);
+    //       // 更新 app.globalData 的值
+    //       appInstance.globalData = deepCopyData(pageItem.data.$globalData);
+    //     }
+    //     // 后台页面暂存到数组中
+    //     else {
+    //       pageItem[$globalSetDataArray].push(obj);
+    //     }
+    //   }
+    // }
   },
   Component: {
     preprocess() {

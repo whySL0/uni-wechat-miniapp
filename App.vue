@@ -25,6 +25,8 @@
 	@import '@/uni_modules/uni-scss/index.scss';
 	/* #ifndef APP-NVUE */
 	@import '@/static/customicons.css';
+	// 引入彩色图标库
+	@import '@/static/css/colorIcon.css';
 	// 引入公共样式
 	@import './uni.scss';
 	// 设置整个项目的背景色

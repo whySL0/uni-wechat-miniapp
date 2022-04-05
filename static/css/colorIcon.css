@@ -1,0 +1,170 @@
+@font-face {
+  font-family: 'colorIcon';  /* project id 2875594 */
+  src: url('');
+  src: url('?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_2875594_dhqzg7ska2p.woff2') format('woff2'),
+  url('https://at.alicdn.com/t/font_2875594_dhqzg7ska2p.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_2875594_dhqzg7ska2p.ttf') format('truetype'),
+  url('#iconfont') format('svg');
+}
+
+.colorIcon {
+  font-family: "colorIcon" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.color-see:before {
+  content: "\e603";
+}
+
+.color-close:before {
+  content: "\e602";
+}
+
+.color-cant-see:before {
+  content: "\e601";
+}
+
+.color-wechat:before {
+  content: "\e600";
+}
+
+.color-jia:before {
+  content: "\e695";
+}
+
+.color-jian:before {
+  content: "\e696";
+}
+
+.color-xuanzhong3:before {
+  content: "\e693";
+}
+
+.color-cuowu:before {
+  content: "\e694";
+}
+
+.color-xiugai:before {
+  content: "\e690";
+}
+
+.color-shangchuan:before {
+  content: "\e68e";
+}
+
+.color-xiazai:before {
+  content: "\e68f";
+}
+
+.color-zhongyedapeisong:before {
+  content: "\e68b";
+}
+
+.color-gantan:before {
+  content: "\e683";
+}
+
+.color-fuzhi:before {
+  content: "\e681";
+}
+
+.color-chakanyuanyin:before {
+  content: "\e67d";
+}
+
+.color-xieshangzhong:before {
+  content: "\e67e";
+}
+
+.color-zhankai:before {
+  content: "\e67c";
+}
+
+.color-sousuo:before {
+  content: "\e67b";
+}
+
+.color-shaixuan:before {
+  content: "\e67a";
+}
+
+.color-kefu:before {
+  content: "\e679";
+}
+
+.color-bohao:before {
+  content: "\e678";
+}
+
+.color-gengduo:before {
+  content: "\e677";
+}
+
+.color-jifen:before {
+  content: "\e676";
+}
+
+.color-zhuanshuzhekou:before {
+  content: "\e66f";
+}
+
+.color-dianziqianzhang:before {
+  content: "\e670";
+}
+
+.color-zhanghaoshezhi:before {
+  content: "\e671";
+}
+
+.color-shouhuodizhi:before {
+  content: "\e672";
+}
+
+.color-lishigouwu:before {
+  content: "\e673";
+}
+
+.color-jifenshangcheng:before {
+  content: "\e674";
+}
+
+.color-wodeshoucang:before {
+  content: "\e675";
+}
+
+.color-weixuanzhong-01:before {
+  content: "\e66d";
+}
+
+.color-xuanzhong-01:before {
+  content: "\e66e";
+}
+
+.color-xuanzhong2:before {
+  content: "\e66b";
+}
+
+.color-weixuanzhong2:before {
+  content: "\e66c";
+}
+
+.color-weixuanzhong1:before {
+  content: "\e669";
+}
+
+.color-xuanzhong1:before {
+  content: "\e66a";
+}
+
+.color-xuanzhong:before {
+  content: "\e667";
+}
+
+.color-weixuanzhong:before {
+  content: "\e668";
+}
+

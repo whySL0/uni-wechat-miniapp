@@ -18,10 +18,13 @@ const header = {
 
 export function api(url, method, data, option) {
 	return new Promise((resolve, reject)=>{
-		uni.showLoading({
-			title: '加载中',
-			mask: true
-		})
+		if(option.header.showLoading) {
+			uni.showLoading({
+				title: '加载中',
+				mask: true
+			})
+		}
+		
 		uni.request({
 			url: baseURL + url,
 			timeout: option?.timeout || 3000,
@@ -29,7 +32,10 @@ export function api(url, method, data, option) {
 			header: {...header, ...option?.header},
 			data: data || {},
 			success: function(response) {
-				uni.hideLoading();
+				if(option.header.showLoading) {
+					uni.hideLoading();
+				}
+				
 				if(response.data.code != 0) {
 					uni.showToast('请求异常');
 					return resolve(response.data)
@@ -38,7 +44,10 @@ export function api(url, method, data, option) {
 				}
 			},
 			fail: function(error) {
-				uni.showToast('请求异常');
+				if(!option.header.hideToast) {
+					uni.hideLoading();
+					uni.showToast('请求异常');
+				}
 				return reject(error)
 			}
 		})

@@ -4,8 +4,8 @@ export default {
   mode: 'dev', // 本地开发运行环境
 
   hostMap: {
-    dev: "http://10.10.31.60:8088",
-    test: "http://10.10.31.60:8088",
-    prod: "http://10.10.31.60:8088"
+    dev: "www.zydmall.com",
+    test: "www.zydmall.com",
+    prod: "www.zydmall.com"
   }
 }

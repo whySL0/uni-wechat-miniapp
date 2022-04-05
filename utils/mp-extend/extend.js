@@ -25,7 +25,6 @@ const life = {
 
 // 用于保存所有的拓展生命周期函数
 let lifeMixin = {};
-debugger;
 for (let key in life) {
   lifeMixin[key] = lifeMixin[key] || {};
   for (let lifeTime of life[key]) {
@@ -44,6 +43,7 @@ let base = {
 };
 
 let MpExtend = function(param) {
+	console.debug('MpExtend传参：', param)
   // 允许接收数组形式的参数
   if (isArray(param)) {
     param.forEach(item => MpExtend(item));
@@ -56,7 +56,7 @@ let MpExtend = function(param) {
       warning(constructorName, "not found");
       continue;
     }
-
+	
     const option = Object.assign({}, param[constructorName]);
     // 如果是生命周期中的某一个，作为生命周期拓展
     for (const key in option) {
@@ -101,8 +101,8 @@ const _Component = decorate(Component, function(option) {
 // 在调用原函数之前调用所有装饰器
 function decorate(f, ...decorators) {
   return function() {
-    console.log('decorate: f', f)
-    console.log('decorate: decorators', decorators)
+    console.debug('decorate: f', f)
+    console.debug('decorate: decorators', decorators)
 
     for (const decorator of decorators) {
       decorator && decorator.apply(this, arguments);
@@ -119,8 +119,8 @@ function decorate(f, ...decorators) {
  * 注：如果存在引用循环递归会栈溢出
  */
 function mixin(o, ...mixs) {
-  console.log('mixin o', ...mixs)
-  console.log('mixin ...mixs', ...mixs)
+  console.debug('混入 基类内容 mixin o', ...mixs)
+  console.debug('混入 拓展内容 mixin ...mixs', mixs)
   mixs.forEach(mix => {
     for (const key in mix) {
       // 两个属性都是对象则递归合并
@@ -159,4 +159,5 @@ Object.assign(MpExtend, {
   warning,
   tips: true
 });
+console.debug('最后的结果：MpExtend', MpExtend)
 export default MpExtend;
