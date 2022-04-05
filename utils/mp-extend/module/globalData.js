@@ -11,25 +11,22 @@ let $globalSetDataArray = "$globalSetDataArray";
 export default {
   App: {
     preprocess() {
-      appOption = this;
+		appOption = this;
     },
     onLaunch() {
-      appInstance = this;
+		appInstance = this;
     }
   },
   Page: {
     preprocess() {
-      this.data.$globalData = appOption.globalData;
+		this.data.$globalData = appOption.globalData;
     },
     data: {
-      $globalData: {},
-      test: 'test'
+		$globalData: {}
     },
 
     onLoad() {
-      this.setData({
-        $globalData: appInstance.globalData
-      });
+		this.$globalData = appInstance.globalData;
     },
 
     // 根据小程序文档中描述，所有非显示的页面都不应当调用setData
@@ -70,15 +67,16 @@ export default {
   },
   Component: {
     preprocess() {
-      this.data.$globalData = appOption.globalData;
+		this.data.$globalData = appOption.globalData;
     },
     data: {
-      $globalData: {}
+		$globalData: {}
     },
     attached() {
-      this.setData({
-        $globalData: appInstance.globalData
-      });
+		this.$globalData = appInstance.globalData
+		  // this.setData({
+		  //   $globalData: appInstance.globalData
+		  // });
     }
   }
 };

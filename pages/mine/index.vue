@@ -117,12 +117,16 @@
 				businessInfo: {}, // 商务业务信息
 				orderNum: {}, // 订单信息
 				toastShow: false,
+				abv: null,
 				statusLineHeight: null, // 获取 CapsuleBar 高度
 			}
 		},
 		onReady() {
 			let menuButtonInfo = uni.getMenuButtonBoundingClientRect()　　//获取胶囊坐标信息
 			this.statusLineHeight = menuButtonInfo.top
+		},
+		onLoad() {
+			this.abv = 'daf'
 		},
 		mounted() {
 			
